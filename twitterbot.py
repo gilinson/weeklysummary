@@ -39,10 +39,10 @@ def generate_image(agg, pathname):
     d = ImageDraw.Draw(img)
     w, h = d.textsize(post_string, font=font)
     #d.text((20, 20), text='Over the last 30 days:\n', font=font, fill='white')
-    d.text(((width-w)/2, (height-h)/2 - 30), text=post_string, font=font, fill='white')
+    d.text(((width-w)/2, (height-h)/2 - 50), text=post_string, font=font, fill='white')
     watermark = Image.open('watermark.png')
     watermark = watermark.resize((328, 122))
-    img.paste(watermark, (480, 296))
+    img.paste(watermark, (460, 280))
     img.save(pathname)
 
 
