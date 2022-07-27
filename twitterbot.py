@@ -14,6 +14,8 @@ def build_post_string(agg):
             name=row['name'],
             tons=round(row['c02_tons'])
         )
+    hashtags = '#ClimateEmergency #Celebritynews'
+    post_string += '\n\n' + hashtags
     print(post_string)
     print(len(post_string))
     return post_string
